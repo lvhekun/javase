@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 
 public class ReflectDemo1 {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException {
-       // method1();
+        method1();
         //method2();
         //method3();
         //method4();
@@ -19,7 +19,7 @@ public class ReflectDemo1 {
     private static void method4() throws ClassNotFoundException, NoSuchFieldException {
         //        Field getDeclaredField​(String name)：返回单个成员变量对象
         //1.获取class对象
-        Class clazz = Class.forName("com.itheima.myreflect4.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect4.Student");
 
         //2.获取money成员变量
         Field field = clazz.getDeclaredField("money");
@@ -33,7 +33,7 @@ public class ReflectDemo1 {
         //想要获取的成员变量必须是真实存在的
         //且必须是public修饰的.
         //1.获取class对象
-        Class clazz = Class.forName("com.itheima.myreflect4.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect4.Student");
 
         //2.获取name这个成员变量
         //Field field = clazz.getField("name");
@@ -47,7 +47,7 @@ public class ReflectDemo1 {
     private static void method2() throws ClassNotFoundException {
         //        Field[] getDeclaredFields​()：返回所有成员变量对象的数组
         //1.获取class对象
-        Class clazz = Class.forName("com.itheima.myreflect4.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect4.Student");
 
         //2.获取所有的Field对象
         Field[] fields = clazz.getDeclaredFields();
@@ -62,7 +62,7 @@ public class ReflectDemo1 {
         //        Field[] getFields​()：返回所有公共成员变量对象的数组
 
         //1.获取class对象
-        Class clazz = Class.forName("com.itheima.myreflect4.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect4.Student");
 
         //2.获取Field对象.
         Field[] fields = clazz.getFields();

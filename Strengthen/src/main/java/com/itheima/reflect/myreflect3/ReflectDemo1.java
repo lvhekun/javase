@@ -8,7 +8,7 @@ import java.lang.reflect.Constructor;
 
 public class ReflectDemo1 {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
-        //method1();
+        method1();
         //method2();
         //method3();
         //method4();
@@ -20,8 +20,9 @@ public class ReflectDemo1 {
         //        Constructor<T> getDeclaredConstructor​(Class<?>... parameterTypes)：
 //                                      返回单个构造方法对象
         //1.获取Class对象
-        Class clazz = Class.forName("com.itheima.myreflect3.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect3.Student");
         Constructor constructor = clazz.getDeclaredConstructor(String.class);
+        System.out.println("sf");
         System.out.println(constructor);
     }
 
@@ -29,7 +30,7 @@ public class ReflectDemo1 {
         //        Constructor<T> getConstructor​(Class<?>... parameterTypes)：
 //                                      返回单个公共构造方法对象
         //1.获取Class对象
-        Class clazz = Class.forName("com.itheima.myreflect3.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect3.Student");
         //小括号中,一定要跟构造方法的形参保持一致.
         Constructor constructor1 = clazz.getConstructor();
         System.out.println(constructor1);
@@ -46,7 +47,7 @@ public class ReflectDemo1 {
         //        Constructor<?>[] getDeclaredConstructors​()：
 //                                      返回所有构造方法对象的数组
         //1.获取Class对象
-        Class clazz = Class.forName("com.itheima.myreflect3.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect3.Student");
 
         Constructor[] constructors = clazz.getDeclaredConstructors();
         for (Constructor constructor : constructors) {
@@ -58,7 +59,7 @@ public class ReflectDemo1 {
         //        Constructor<?>[] getConstructors​()：
 //                                      返回所有公共构造方法对象的数组
         //1.获取Class对象
-        Class clazz = Class.forName("com.itheima.myreflect3.Student");
+        Class clazz = Class.forName("com.itheima.reflect.myreflect3.Student");
         Constructor[] constructors = clazz.getConstructors();
         for (Constructor constructor : constructors) {
             System.out.println(constructor);

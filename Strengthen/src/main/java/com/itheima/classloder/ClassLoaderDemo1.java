@@ -3,7 +3,7 @@ package com.itheima.classloder;
 /**
  *  获取类加载器
  */
-public class ClassLoaderDemo1 {
+public class  ClassLoaderDemo1 {
     public static void main(String[] args) {
         //获取系统类加载器
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
